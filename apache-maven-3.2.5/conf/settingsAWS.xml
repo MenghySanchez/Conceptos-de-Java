@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<settings>  
+
+<servers> 
+    <server>
+      <id>clouddev</id>
+      <username>admin</username>
+      <password>{OJnGaUXN0p0HKHYpe0KqTvkUiRgmFOfJQ7X5WCEM3zY=}</password>
+    </server>
+   <server>
+      <id>clouddev-snapshots</id>
+      <username>admin</username>
+      <password>{OJnGaUXN0p0HKHYpe0KqTvkUiRgmFOfJQ7X5WCEM3zY=}</password>
+   </server>
+    <server>
+      <id>cobiscloud</id>
+      <username>admin</username>
+      <password>{OJnGaUXN0p0HKHYpe0KqTvkUiRgmFOfJQ7X5WCEM3zY=}</password>
+    </server>     
+</servers>  
+    
+ 
+<mirrors>
+
+
+
+	<!--mirror>
+		<id>internal</id>
+		<name>Cobis Central</name>
+		<url>http://192.168.66.130:8080/archiva/repository/internal/</url>
+		<mirrorOf>maven3</mirrorOf>
+	</mirror-->
+    <mirror>
+	    <id>clouddev</id>
+      <name>Cobis Cloud Development</name>
+      <url>https://nexus.cloud-cobiscorp.com/repository/core-cloud/</url>
+
+ 	  <mirrorOf>*</mirrorOf>
+    </mirror>
+
+    <mirror>
+	    <id>clouddev-snapshots</id>
+      <name>Cobis Cloud Development SNAPSHOTS</name>
+      <url>https://nexus.cloud-cobiscorp.com/repository/cobis-cloud-snapshot/</url>
+
+ 	  <mirrorOf>*</mirrorOf>
+    </mirror>
+
+	
+	
+</mirrors>
+
+
+
+<profiles>
+  <profile>
+     <id>allow-snapshots</id>
+        <activation><activeByDefault>true</activeByDefault></activation>
+     <repositories>
+       <repository>
+         <id>clouddev</id>
+         <url>https://nexus.cloud-cobiscorp.com/repository/core-cloud/</url>
+         <releases><enabled>false</enabled></releases>
+         <snapshots><enabled>true</enabled></snapshots>
+       </repository>
+     </repositories>
+    </profile>
+
+    <profile>
+        <id>sonar</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <sonar.host.url>
+                http://www.sonar.devops.core.cloud-cobiscorp.com:9000/
+            </sonar.host.url>
+        </properties>
+     </profile>
+</profiles>
+
+</settings>  
+
+

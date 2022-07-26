@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>C:\Users\bvizuete.COBISCORP\.m2\repository</localRepository>
+	<servers>
+		<server>
+			<id>central</id>
+			<username>ntrujillo</username>
+			<password>{5OZClDkHjJkHSexq/L2ZNKNynw3uOUD5rgDUYmCs24U=}</password>
+		</server>
+	</servers>
+	<profiles>
+		<profile>
+			<id>env-development</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cloud-ec-mvn-dev-grp</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cloud-ec-mvn-dev-grp</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>env-hardening</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cloud-ec-mvn-dev-grp</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cloud-ec-mvn-dev-grp</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+		   <id>sonar</id>
+			   <activation>
+				  <activeByDefault>true</activeByDefault>
+			   </activation>
+			   <properties>              
+				  <sonar.jdbc.username>admin</sonar.jdbc.username>
+				  <sonar.jdbc.password>admin</sonar.jdbc.password>
+				  <sonar.host.url>http://192.168.64.207:9700</sonar.host.url>
+			   </properties>
+		</profile>
+		<profile>
+		   <id>sonar-CLOUD_EC</id>
+			   <activation>
+				  <activeByDefault>true</activeByDefault>
+			   </activation>
+			   <properties>              
+				  <sonar.jdbc.username>cobis</sonar.jdbc.username>
+				  <sonar.jdbc.password>Passw0rd2017</sonar.jdbc.password>
+				  <sonar.host.url>http://mavenrepo-1579979608.us-east-1.elb.amazonaws.com/</sonar.host.url>
+			   </properties>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>env-development</activeProfile>
+	</activeProfiles>
+</settings>

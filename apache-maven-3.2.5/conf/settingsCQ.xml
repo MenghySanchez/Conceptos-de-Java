@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<servers>
+		<server>
+			<id>central</id>
+			<username>cquishpe</username>
+			<password>{mtcRVs9nlGIHqTp47t/QwwvYI3xQF61vRecHXqU7o5g=}</password>
+		</server>
+	</servers>
+	<profiles>
+		<profile>
+			<id>env-development</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cus-mvn-dev-grp</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cus-mvn-dev-grp</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>env-hardening</id>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cus-mvn-dev-grp</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<releases>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central</id>
+					<name>Central Repository</name>
+					<url>http://repolib.cobiscorp.com:8081/nexus/content/groups/cus-mvn-dev-grp</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.jdbc.url>jdbc:mysql://SRV01SONQ01:3313/sonar?useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true</sonar.jdbc.url>
+				<sonar.jdbc.username>sonar</sonar.jdbc.username>
+				<sonar.jdbc.password>MsYvUSA5TgJ3</sonar.jdbc.password>
+				<sonar.host.url>http://192.168.64.207:9700/</sonar.host.url>
+			</properties>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>env-development</activeProfile>
+	</activeProfiles>
+</settings> 
