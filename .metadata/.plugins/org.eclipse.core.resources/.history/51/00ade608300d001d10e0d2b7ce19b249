@@ -1,0 +1,8 @@
+package com.cmc.servicios;
+
+public class ServicioClientes {
+
+	 pubic void metodo1(){
+		 
+	 }
+}
