@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="com.cmc.rest.entidades.Persona"/>
+<fullyQualifiedTypeName name="com.cmc.rest.servicios.ServicioPersona"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
 </qualifiedTypeNameHistroy>

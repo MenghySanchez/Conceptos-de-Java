@@ -12,7 +12,6 @@ public class TestAcualizar {
 		Persona p = new Persona("0850160813", "menghy", "sanchez");
 		System.out.println(p.getNombre()+ " " +p.getApellido());
 		ServicioPersona.actualizar(p);
-		
 		System.out.println(p.getNombre()+ " " +p.getApellido());
 	}
 
