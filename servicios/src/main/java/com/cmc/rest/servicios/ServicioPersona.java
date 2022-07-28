@@ -1,0 +1,14 @@
+package com.cmc.rest.servicios;
+
+import com.cmc.rest.entidades.Persona;
+
+public class ServicioPersona {
+
+	public static Persona actualizar(Persona p){
+	
+		p.setNombre(p.getNombre().toUpperCase());
+		p.setApellido(p.getApellido().toUpperCase());
+		
+		return p;
+	}
+}
