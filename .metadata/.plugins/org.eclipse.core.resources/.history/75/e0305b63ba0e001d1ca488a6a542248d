@@ -1,0 +1,18 @@
+package com.cmc.wsrest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+import com.cmc.rest.entidades.Persona;
+
+@Path("/personas")
+public class PersonaRest {
+	
+	@Path("/cambiar")
+	@GET
+//	@POST
+	public String modificar(){
+	return "hola";		
+	}
+}

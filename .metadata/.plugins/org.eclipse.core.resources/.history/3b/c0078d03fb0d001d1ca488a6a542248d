@@ -1,0 +1,10 @@
+package com.cmc.rest.servicios;
+
+import com.cmc.rest.entidades.Persona;
+
+public class ServicioPersona {
+
+	public static Persona actualizar(Persona p){
+		
+	}
+}

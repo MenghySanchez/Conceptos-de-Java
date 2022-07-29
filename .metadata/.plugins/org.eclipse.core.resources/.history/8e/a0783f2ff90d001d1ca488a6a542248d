@@ -1,0 +1,8 @@
+package com.cmc.rest.servicios;
+
+public class ServicioPersona {
+
+	public static Persona actualizar(Persona p){
+		
+	}
+}

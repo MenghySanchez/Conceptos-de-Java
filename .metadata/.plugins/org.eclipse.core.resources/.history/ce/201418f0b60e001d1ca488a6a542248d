@@ -1,0 +1,15 @@
+package com.cmc.wsrest;
+
+import javax.ws.rs.Path;
+
+import com.cmc.rest.entidades.Persona;
+
+@Path("/personas")
+public class PersonaRest {
+	
+		@Path("/cambiar")
+		public Persona modificar(Persona p){
+		
+		}
+	}
+}
